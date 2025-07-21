@@ -1,0 +1,96 @@
+.grid{
+    width: 100%;
+}
+
+.contenedorProductos {
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    padding: 0 1rem;
+     
+}
+
+.producto{
+  border: 1px solid #cfcfcf;
+    width: 250px;
+    height: 350px;
+    position: relative;  
+}
+
+
+  
+.productoImagen {
+  max-width: 180px;
+  height: 190px;
+ 
+}
+
+
+.carruselBoton {
+  background-color: transparent;
+  border: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color:rgb(75, 74, 74);
+  padding: 2%;
+  gap: 10px;
+}
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+.carruselBoton:hover {
+  color:black;
+  border: transparent;
+}
+
+.precio{
+     border-top: .8px solid #cfcfcf;
+    margin-bottom: 1rem;
+    padding-top: .2rem;
+    height: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+}
+
+.productoDetalles{
+    background-color:white;
+    color:rgb(48, 48, 48);
+    font-family:inherit;
+    font-weight: 300;
+    font-size:100%;
+    height: 50px;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.productoBoton{
+   background-color: white;
+    border: 1.5px solid black;
+    border-radius: 5rem ;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: .2rem;
+    color:rgb(202, 27, 27);
+    font-weight: 500;
+}
+
+.productoBoton:hover{
+    border: 2px solid white;
+    background-color: rgb(202, 27, 27);
+    color: white;
+}

@@ -1,0 +1,88 @@
+.carrito{
+     display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 10%;
+    margin: 200px 50px;
+}
+
+.productosCarrito{
+     display: flex;
+    flex-direction: column;
+    gap:1rem ;
+   
+}
+
+.productoCarrito{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cfcfcf;
+    padding: .5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+    font-weight: 600;
+}
+
+.carritoImagen{
+      width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+}
+
+.carritoAcciones{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.carritoAccionesVaciar{
+    border: 0;
+    background-color: #cfcfcf;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.carritoAccionesDerecha{
+    display: flex;
+
+}
+
+.carritoAccionesTotal{
+    display: flex;
+    border: 0;
+    background-color: #cfcfcf;
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    color: black;
+    font-weight: 600;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+
+.carritoAccionesComprar{
+    border: 0;
+    background-color:  rgb(202, 27, 27);
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer; 
+}
+
+.flecha{
+    border: 0;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: rgb(170, 0, 0);
+    text-transform: uppercase;
+    cursor: pointer; 
+    font-size:3rem;
+}
