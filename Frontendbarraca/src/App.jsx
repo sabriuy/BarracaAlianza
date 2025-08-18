@@ -38,39 +38,47 @@ function App() {
 
   return (
     <>
-      <nav className="navbar-principal">
+      <nav className='navbar-principal'>
         <h1>
-          <span id="barraca">Barraca</span>
-          <span id="alianza"> Alianza</span>
+          <span id='barraca'>Barraca</span>
+          <span id='alianza'> Alianza</span>
         </h1>
 
-        <div className="search">
+        <div className='search'>
           <input
-            className="searchTerm"
+            className='searchTerm'
             onChange={buscar}
-            type="text"
+            type='text'
             value={busqueda}
-            placeholder="¿Qué estás buscando?"
+            placeholder='¿Qué estás buscando?'
           />
-          <button className="searchButton" type="submit">
-            <i className="bi bi-search"></i>
+          <button
+            className='searchButton'
+            type='submit'
+          >
+            <i className='bi bi-search'></i>
           </button>
 
           {busqueda && resultados.length > 0 && (
-            <div className="dropdown">
+            <div className='dropdown'>
               {resultados.map((item) => {
                 const imgs = Array.isArray(item.imagen) ? item.imagen : [];
                 const primera = imgs[0] || '';
                 return (
                   <div
                     key={item.id}
-                    className="dropdown-item"
+                    className='dropdown-item'
                     onClick={seleccionarProducto}
                   >
-                    <img src={primera} alt={item.nombre} width={40} height={40} />
+                    <img
+                      src={primera}
+                      alt={item.nombre}
+                      width={40}
+                      height={40}
+                    />
                     <span>{item.nombre}</span>
                     <span>${item.precio}</span>
-                    <button className="dropdown-btn">Ver</button>
+                    <button className='dropdown-btn'>Ver</button>
                   </div>
                 );
               })}
@@ -79,35 +87,77 @@ function App() {
         </div>
 
         <div className='usuarios'>
-            <Link className='usuario' to="/login"><i class="bi bi-person-fill"></i></Link>
-            <Link className='usuario' to="/register"><i class="bi bi-person-plus-fill"></i></Link>
-            <Link className="usuario" to="/carrito"><i class="bi bi-cart3"></i></Link>
+          <Link
+            className='usuario'
+            to='/login'
+          >
+            <i class='bi bi-person-fill'></i>
+          </Link>
+          <Link
+            className='usuario'
+            to='/register'
+          >
+            <i class='bi bi-person-plus-fill'></i>
+          </Link>
+          <Link
+            className='usuario'
+            to='/carrito'
+          >
+            <i class='bi bi-cart3'></i>
+          </Link>
         </div>
 
-        <div className="links">
-          <Link className="link" to="/inicio">Inicio</Link>
-          <Link className="link" to="/productos">Productos</Link>
-          <Link className="linki" to="/carrito">Carrito</Link>
-        
+        <div className='links'>
+          <Link
+            className='link'
+            to='/inicio'
+          >
+            Inicio
+          </Link>
+          <Link
+            className='link'
+            to='/productos'
+          >
+            Productos
+          </Link>
+          <Link
+            className='linki'
+            to='/carrito'
+          >
+            Carrito
+          </Link>
         </div>
       </nav>
 
       <Routes>
-        <Route path="/" element={<Navigate to="/inicio" />} />
-        <Route path="/inicio" element={<Inicio />} />
-        <Route path="/productos" element={<Productos />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
         <Route
-          path="/carrito"
+          path='/'
+          element={<Navigate to='/inicio' />}
+        />
+        <Route
+          path='/inicio'
+          element={<Inicio />}
+        />
+        <Route
+          path='/productos'
+          element={<Productos />}
+        />
+        <Route
+          path='/register'
+          element={<Register />}
+        />
+        <Route
+          path='/login'
+          element={<Login />}
+        />
+        <Route
+          path='/carrito'
           element={
             <ProtectedRoute>
               <Carrito />
             </ProtectedRoute>
           }
         />
-        {/* Si quisieras proteger /productos, sería igual: */}
-        {/* <Route path="/productos" element={<ProtectedRoute><Productos/></ProtectedRoute>} /> */}
       </Routes>
     </>
   );

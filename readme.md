@@ -8,6 +8,7 @@ cd frontendbarraca
 npm install
 npm run dev
 
+
 ## 📦 Base de Datos
 
 El proyecto incluye las bases de datos `bdproductos_productos.sql` `bdproductos_usuarios.sql` (en la carpeta `/sql`).

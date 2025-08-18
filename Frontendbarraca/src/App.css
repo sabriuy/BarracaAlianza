@@ -1,41 +1,41 @@
 #root {
- width: 100%;
+  width: 100%;
   text-align: center;
 }
 
-*{
+* {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   box-sizing: border-box;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
-  color:white;
-  cursor:pointer;
+  color: white;
+  cursor: pointer;
 }
 
-body{
-  font-family: 'Open Sans', sans-serif;;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
-.navbar-principal{
-   position: absolute;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   height: 9rem;
-   width: 100%;
-   top:0;
-   background-color: rgb(223, 17, 17);
-   color:white;
-   font-family: 'Open Sans', sans-serif;
-   z-index: 99;
-   }
+.navbar-principal {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+  top: 0;
+  background-color: rgb(223, 17, 17);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  z-index: 99;
+}
 
 #barraca {
   display: block;
@@ -49,16 +49,14 @@ body{
 
 #alianza {
   display: block;
-  margin-top: -0.5rem; 
-  margin-left: 4rem;   
+  margin-top: -0.5rem;
+  margin-left: 4rem;
   font-family: rubik;
   font-weight: 600;
   font-style: italic;
   font-size: 3rem;
   text-shadow: 0px 2px 5px black;
 }
-
-
 
 .search {
   width: 30%;
@@ -75,28 +73,24 @@ body{
   height: 36px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color:black;
+  color: black;
 }
 
-.searchTerm:focus{
-  color:black;
-
+.searchTerm:focus {
+  color: black;
 }
 
 .searchButton {
   width: 40px;
   height: 36px;
   border: 0px solid rgb(127, 125, 125);
-  background:#fff;
+  background: #fff;
   text-align: center;
-  color:rgb(127, 125, 125);
+  color: rgb(127, 125, 125);
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
 }
-
-
-
 
 .dropdown {
   position: absolute;
@@ -123,52 +117,50 @@ body{
   background-color: #dad8d8;
 }
 
-.dropdown-btn{
+.dropdown-btn {
   position: absolute;
   margin-left: 80%;
   border: none;
 }
 
-.links{
-  position:absolute;
+.links {
+  position: absolute;
   width: 100%;
   display: flex;
-  
-  top:9rem;
+
+  top: 9rem;
   background-color: rgb(202, 27, 27);
-  padding:.5rem;
+  padding: 0.5rem;
   box-shadow: 0px 2px 5px black;
   text-align: center;
   padding-left: 40%;
-  
 }
 
-.link{
+.link {
   padding-right: 10px;
   padding-left: 10px;
   text-transform: uppercase;
   border-right: 2px white solid;
 }
 
-.linki{
-   padding-right: 10px;
+.linki {
+  padding-right: 10px;
   padding-left: 10px;
   text-transform: uppercase;
 }
 
 .link:hover,
-.linki:hover{
+.linki:hover {
   color: #dad8d8;
 }
 
-.usuarios{
-position:absolute;
-top: 1.5rem;
-margin-left: 90%;
+.usuarios {
+  position: absolute;
+  top: 1.5rem;
+  margin-left: 90%;
 }
 
-.usuario{
+.usuario {
   font-size: 1.5rem;
   padding-right: 1rem;
 }
-
