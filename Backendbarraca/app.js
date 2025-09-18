@@ -4,8 +4,8 @@ const cors = require('cors');
 const app = express();
 
 // 1) Middlewares globales
-app.use(cors());                  // Permite solicitudes cross-origin
-app.use(express.json());          // Parseo automático de JSON
+app.use(cors());                  
+app.use(express.json());          
 
 // 2) Importar middlewares y rutas
 const authMiddleware = require('./middleware/auth');
