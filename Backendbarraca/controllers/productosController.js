@@ -1,4 +1,3 @@
-// controllers/productosController.js
 const db = require('../db');
 
 // Obtener todos los productos
@@ -11,7 +10,7 @@ exports.getProductos = (req, res) => {
 
     const productos = results.map(p => ({
       ...p,
-      // 'fotos' ya lo maneja mysql2 como JSON, pero por si acaso:
+      
       imagen: p.fotos || []
     }));
 
@@ -19,7 +18,7 @@ exports.getProductos = (req, res) => {
   });
 };
 
-// Obtener un producto por ID
+
 exports.getProducto = (req, res) => {
   const { id } = req.params;
   db.query('SELECT * FROM productos WHERE id = ?', [id], (err, results) => {
@@ -38,7 +37,7 @@ exports.getProducto = (req, res) => {
   });
 };
 
-// Crear un producto nuevo
+
 exports.createProducto = (req, res) => {
   const { nombre, descripcion, precio, fotos } = req.body;
   const fotosJSON = JSON.stringify(fotos);
@@ -56,7 +55,7 @@ exports.createProducto = (req, res) => {
   );
 };
 
-// Actualizar un producto existente
+
 exports.updateProducto = (req, res) => {
   const { id } = req.params;
   const { nombre, descripcion, precio, fotos } = req.body;
@@ -78,7 +77,7 @@ exports.updateProducto = (req, res) => {
   );
 };
 
-// Eliminar un producto
+
 exports.deleteProducto = (req, res) => {
   const { id } = req.params;
 
